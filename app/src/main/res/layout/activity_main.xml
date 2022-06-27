@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="14dp"
         android:ems="10"
         android:hint="@string/editAltura"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="@string/editPeso"
         android:inputType="number|numberDecimal"
@@ -41,28 +41,51 @@
         android:id="@+id/resultado"
         android:layout_width="208dp"
         android:layout_height="58dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="101dp"
         android:layout_marginEnd="102dp"
+        android:layout_marginBottom="10dp"
         android:text="IMC"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPeso" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="312dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="306dp"
         android:onClick="imc"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="121dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
-        app:layout_constraintVertical_bias="0.531" />
+        app:layout_constraintTop_toBottomOf="@+id/editPeso">
+
+        <RadioButton
+            android:id="@+id/rdnF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+        <RadioButton
+            android:id="@+id/rdnM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
